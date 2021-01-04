@@ -67,7 +67,7 @@ const clientConfig = {
         ),
     },
     module: {
-        rules: [js.css, file],
+        rules: [js, css, file],
     },
     optimization: {
         splitChunks: {
