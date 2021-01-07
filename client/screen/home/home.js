@@ -11,7 +11,7 @@ class Home extends React.Component{
 
     home(){
         console.log("click home");
-        this.props.router.push('/login')
+        //this.props.router.push('/login')
     }
 
     render(){

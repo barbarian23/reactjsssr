@@ -1,3 +1,50 @@
-.clientBackground{
+#root{
+    position: absolute;
+    /* left: 0; */
+    /* right: 0; */
+    height: 100%;
+    width: 100%;
+}
+.clientBackground {
     background: green;
+}
+
+.homeDiv {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.homeLogin {
+    height: 50px;
+    line-height: 50px;
+    padding: 5px 10px;
+    margin: 5px 10px;
+    font-size: 18px;
+    background: #ff7900;
+}
+
+.homeLogin a {
+    text-decoration: none;
+}
+
+.AppMenu {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.AppMenu-step {
+    display: flex;
+    width: 300px;
+    height: 100%;
+    border-right: 4px solid #ff7900;
+}
+
+.AppMenu-action {
+    display: flex;
+    flex-grow: 1;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }

@@ -1,5 +1,6 @@
 const nodeExternals = require("webpack-node-externals");
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const path = require("path");
 
@@ -18,7 +19,16 @@ const js = {
 const css = {
     test: /\.css$/,
     exclude: /node_modules/,
-    use: [MiniCssExtractPlugin.loader, 'css-loader']
+    use: [
+        //{ loader: 'style-loader' }, 
+        MiniCssExtractPlugin.loader, 'css-loader',
+        // {
+        //     loader: 'css-loader',
+        //     options: {
+        //         sourceMap: true
+        //     }
+        // }
+    ]
 };
 
 const file = {
@@ -52,7 +62,7 @@ const serverConfig = {
         new MiniCssExtractPlugin({
             filename: '[name].css',
             chunkFilename: '[id].css',
-        })
+        }),
     ]
 };
 
@@ -82,7 +92,13 @@ const clientConfig = {
         new MiniCssExtractPlugin({
             filename: '[name].css',
             chunkFilename: '[id].css',
-        })
+        }),
+        // new HtmlWebpackPlugin({
+        //     template: __dirname + '/client/template.html',
+        //     inject: 'body',
+        //     filename: "index.html",
+
+        // })
     ]
 };
 

@@ -8,22 +8,28 @@
     "dev": "webpack && npm run copy_static_assets && concurrently \"webpack --watch\" \"nodemon dist\"",
     "test": "npm run webpack && concurrently \"npm run webpack --watch\" \"mocha --watch\"",
     "start": "node dist/index.js",
-    "copy_static_assets": "node copyStaticAssets.js"
+    "copy_static_assets": "node copyStaticAssets.js",
+    "start:dev": "webpack serve --mode development --open",
+    "startstart": "NODE=production node dist/index.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "compression": "^1.7.4",
+    "excel4node": "^1.7.2",
     "express": "^4.17.1",
+    "iedriver": "^3.150.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-redux": "^7.2.2",
     "react-router-dom": "^5.2.0",
     "redux": "^4.0.5",
-    "redux-saga": "^1.1.3"
+    "redux-saga": "^1.1.3",
+    "selenium-webdriver": "^4.0.0-alpha.8"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
+    "@babel/polyfill": "^7.12.1",
     "@babel/preset-env": "^7.12.11",
     "@babel/preset-react": "^7.12.10",
     "babel-loader": "^8.2.2",
@@ -32,10 +38,12 @@
     "css-loader": "^5.0.1",
     "file-loader": "^6.2.0",
     "fs-extra": "^9.0.1",
+    "html-webpack-plugin": "^4.5.1",
     "mini-css-extract-plugin": "^1.3.3",
     "nodemon": "^2.0.6",
+    "style-loader": "^2.0.0",
     "webpack": "^5.11.1",
-    "webpack-cli": "^4.3.0",
+    "webpack-cli": "^4.3.1",
     "webpack-node-externals": "^2.5.2"
   }
 }
