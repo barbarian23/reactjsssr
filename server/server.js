@@ -87,5 +87,5 @@ async function receive(req, res) {
 }
 
 const { PORT = 3001 } = process.env;
-
-app.listen(PORT, (PORT) => console.log("######## app running on port " + PORT + " ########"));
+const port = PORT;
+var listener = app.listen(PORT, (PORT) => console.log("######## app running on port " + port+ " ########"));

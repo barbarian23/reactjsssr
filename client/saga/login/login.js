@@ -6,9 +6,6 @@ import { IS_LOGIN } from "../../constants/login/login";
 
 const doLogin = async function () {
     console.log("doLogin");
-    
-
-
 }
 
 const login = function* (username,pasword) {
@@ -27,13 +24,13 @@ const login = function* (username,pasword) {
 
 
 export const listenLogin = function* () {
-    //yield takeLatest(LOGIN);
+    //yield takeLatest(LOGIN,login);
     //yield call(login);
 
-    while(yield take(LOGIN)){
-        const getUser = yield fork(login);
-        yield cancel(login);
-    }
+    // while(yield take(LOGIN)){
+    //     const getUser = yield fork(login);
+    //     yield cancel(login);
+    // }
 }
 
 export const watchLogin = listenLogin;
